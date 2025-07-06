@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استراحة وشاليه الغصن - إدارة الحجوزات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+/* --- CSS START --- */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Navigation Styles */
+nav {
+    background: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #35424a;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #35424a;
+    color: #ffffff;
+}
+
+/* Main Content Styles */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #35424a;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #666666;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* --- CSS END --- */
+    </style>
+</head>
+<body>
+<!-- سيتم هنا إدراج محتوى body من index.html بدون روابط خارجية للملفات -->
+<header class="header">
+    ...existing code...
+</header>
+<!-- ...existing code... -->
+<footer class="footer">
+    ...existing code...
+</footer>
+<!-- Success Modal -->
+<div id="successModal" class="modal">
+    ...existing code...
+</div>
+<script>
+// سيتم هنا إدراج محتوى script.js بالكامل
+// Global Variables
+let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+let isAdminLoggedIn = false;
+const ADMIN_USERNAME = 'admin';
+const ADMIN_PASSWORD = 'admin123';
+
+// Functions
+function renderBookings() {
+    const bookingsTableBody = document.getElementById('bookingsTable').getElementsByTagName('tbody')[0];
+    bookingsTableBody.innerHTML = '';
+
+    bookings.forEach((booking, index) => {
+        const row = bookingsTableBody.insertRow();
+        row.insertCell(0).innerText = index + 1;
+        row.insertCell(1).innerText = booking.name;
+        row.insertCell(2).innerText = booking.date;
+        row.insertCell(3).innerText = booking.time;
+        row.insertCell(4).innerText = booking.guests;
+        row.insertCell(5).innerText = booking.totalPrice;
+        const actionsCell = row.insertCell(6);
+        actionsCell.innerHTML = `<button class="btn-edit" onclick="editBooking(${index})">تعديل</button>
+                                 <button class="btn-delete" onclick="deleteBooking(${index})">حذف</button>`;
+    });
+}
+
+function addBooking(booking) {
+    bookings.push(booking);
+    localStorage.setItem('bookings', JSON.stringify(bookings));
+    renderBookings();
+}
+
+function deleteBooking(index) {
+    bookings.splice(index, 1);
+    localStorage.setItem('bookings', JSON.stringify(bookings));
+    renderBookings();
+}
+
+function editBooking(index) {
+    const booking = bookings[index];
+    document.getElementById('bookingName').value = booking.name;
+    document.getElementById('bookingDate').value = booking.date;
+    document.getElementById('bookingTime').value = booking.time;
+    document.getElementById('bookingGuests').value = booking.guests;
+    document.getElementById('bookingIndex').value = index;
+}
+
+function updateBooking(booking) {
+    const index = document.getElementById('bookingIndex').value;
+    bookings[index] = booking;
+    localStorage.setItem('bookings', JSON.stringify(bookings));
+    renderBookings();
+}
+
+// Event Listeners
+document.getElementById('bookingForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const booking = {
+        name: this.bookingName.value,
+        date: this.bookingDate.value,
+        time: this.bookingTime.value,
+        guests: this.bookingGuests.value,
+        totalPrice: this.totalPrice.value
+    };
+    if (this.bookingIndex.value) {
+        updateBooking(booking);
+    } else {
+        addBooking(booking);
+    }
+    this.reset();
+});
+
+// Initial Render
+renderBookings();
+</script>
+</body>
+</html>

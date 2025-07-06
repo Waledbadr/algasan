@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استراحة وشاليه الغصن - إدارة الحجوزات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* انسخ هنا كامل محتوى styles.css */
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><i class="fas fa-home"></i> استراحة وشاليه الغصن</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#gallery">المعرض</a></li>
+                    <li><a href="#booking">الحجز</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                    <li><a href="#admin" class="admin-link">إدارة الحجوزات</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 class="hero-title">مرحباً بكم في استراحة وشاليه الغصن</h1>
+                <p class="hero-subtitle">استمتع بإقامة مريحة وخدمات متميزة في أجواء هادئة ومريحة</p>
+                <a href="#booking" class="cta-button">احجز الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">خدماتنا</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-bed"></i>
+                    <h3>غرف مريحة</h3>
+                    <p>غرف نوم مجهزة بأحدث وسائل الراحة والضيافة</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-swimming-pool"></i>
+                    <h3>مسبح خاص</h3>
+                    <p>مسبح نظيف ومعقم مع منطقة استجمام</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>مطبخ مجهز</h3>
+                    <p>مطبخ كامل مع جميع الأدوات والمعدات</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-wifi"></i>
+                    <h3>انترنت مجاني</h3>
+                    <p>شبكة واي فاي عالية السرعة</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-car"></i>
+                    <h3>موقف سيارات</h3>
+                    <p>موقف سيارات آمن ومظلل</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>حراسة 24/7</h3>
+                    <p>حراسة وأمان على مدار الساعة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">معرض الصور</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/4a90e2/ffffff?text=استراحة+خارجية" alt="منظر خارجي">
+                    <div class="gallery-overlay">
+                        <h3>المنظر الخارجي</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/7b68ee/ffffff?text=المسبح" alt="المسبح">
+                    <div class="gallery-overlay">
+                        <h3>المسبح</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/50c878/ffffff?text=غرفة+النوم" alt="غرفة النوم">
+                    <div class="gallery-overlay">
+                        <h3>غرفة النوم</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/ff6b6b/ffffff?text=صالة+الجلوس" alt="صالة الجلوس">
+                    <div class="gallery-overlay">
+                        <h3>صالة الجلوس</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/ffa500/ffffff?text=المطبخ" alt="المطبخ">
+                    <div class="gallery-overlay">
+                        <h3>المطبخ</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/20b2aa/ffffff?text=الحديقة" alt="الحديقة">
+                    <div class="gallery-overlay">
+                        <h3>الحديقة</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <h2 class="section-title">احجز الآن</h2>
+            <div class="booking-container">
+                <div class="booking-form-wrapper">
+                    <form id="bookingForm" class="booking-form">
+                        <div class="form-group">
+                            <label for="guestName">الاسم الكامل</label>
+                            <input type="text" id="guestName" name="guestName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guestPhone">رقم الهاتف</label>
+                            <input type="tel" id="guestPhone" name="guestPhone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guestEmail">البريد الإلكتروني</label>
+                            <input type="email" id="guestEmail" name="guestEmail" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkIn">تاريخ الوصول</label>
+                                <input type="date" id="checkIn" name="checkIn" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkOut">تاريخ المغادرة</label>
+                                <input type="date" id="checkOut" name="checkOut" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">عدد الأشخاص</label>
+                            <select id="guests" name="guests" required>
+                                <option value="">اختر عدد الأشخاص</option>
+                                <option value="1">شخص واحد</option>
+                                <option value="2">شخصان</option>
+                                <option value="3">3 أشخاص</option>
+                                <option value="4">4 أشخاص</option>
+                                <option value="5">5 أشخاص</option>
+                                <option value="6">6 أشخاص</option>
+                                <option value="7">7 أشخاص</option>
+                                <option value="8">8 أشخاص</option>
+                                <option value="9">9 أشخاص</option>
+                                <option value="10">10 أشخاص</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="accommodation">نوع الإقامة</label>
+                            <select id="accommodation" name="accommodation" required>
+                                <option value="">اختر نوع الإقامة</option>
+                                <option value="استراحة">استراحة</option>
+                                <option value="شاليه">شاليه</option>
+                                <option value="كلاهما">كلاهما</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="specialRequests">طلبات خاصة</label>
+                            <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="أي طلبات خاصة أو ملاحظات..."></textarea>
+                        </div>
+                        <div class="price-display">
+                            <div class="price-item">
+                                <span>عدد الليالي: <span id="nights">0</span></span>
+                            </div>
+                            <div class="price-item">
+                                <span>السعر الإجمالي: <span id="totalPrice">0</span> ر.س</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-calendar-check"></i>
+                            تأكيد الحجز
+                        </button>
+                    </form>
+                </div>
+                <div class="booking-info">
+                    <h3>معلومات الحجز</h3>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>أوقات الاستقبال</h4>
+                            <p>الوصول: 3:00 مساءً<br>المغادرة: 12:00 ظهراً</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <div>
+                            <h4>الأسعار</h4>
+                            <p>الاستراحة: 300 ر.س/ليلة<br>الشاليه: 250 ر.س/ليلة</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-ban"></i>
+                        <div>
+                            <h4>سياسة الإلغاء</h4>
+                            <p>يمكن الإلغاء حتى 24 ساعة قبل الوصول</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">تواصل معنا</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>معلومات الاتصال</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>الهاتف</h4>
+                            <p>+966 50 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>البريد الإلكتروني</h4>
+                            <p>info@algasan-resort.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>الموقع</h4>
+                            <p>المملكة العربية السعودية<br>الرياض - حي الملقا</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <h4>تابعنا على</h4>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="contactName">الاسم</label>
+                            <input type="text" id="contactName" name="contactName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">البريد الإلكتروني</label>
+                            <input type="email" id="contactEmail" name="contactEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">الموضوع</label>
+                            <input type="text" id="contactSubject" name="contactSubject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">الرسالة</label>
+                            <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Section -->
+    <section id="admin" class="admin">
+        <div class="container">
+            <h2 class="section-title">إدارة الحجوزات</h2>
+            <div class="admin-login" id="adminLogin">
+                <div class="login-form">
+                    <h3>تسجيل الدخول</h3>
+                    <form id="adminLoginForm">
+                        <div class="form-group">
+                            <label for="adminUsername">اسم المستخدم</label>
+                            <input type="text" id="adminUsername" name="adminUsername" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="adminPassword">كلمة المرور</label>
+                            <input type="password" id="adminPassword" name="adminPassword" required>
+                        </div>
+                        <button type="submit" class="submit-btn">تسجيل الدخول</button>
+                    </form>
+                </div>
+            </div>
+            <div class="admin-panel" id="adminPanel" style="display: none;">
+                <div class="admin-header">
+                    <h3>لوحة إدارة الحجوزات</h3>
+                    <button id="logoutBtn" class="logout-btn">تسجيل الخروج</button>
+                </div>
+                <div class="admin-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-calendar-check"></i>
+                        <div>
+                            <h4 id="totalBookings">0</h4>
+                            <p>إجمالي الحجوزات</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4 id="pendingBookings">0</h4>
+                            <p>حجوزات معلقة</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4 id="confirmedBookings">0</h4>
+                            <p>حجوزات مؤكدة</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bookings-table">
+                    <h4>قائمة الحجوزات</h4>
+                    <div class="table-responsive">
+                        <table id="bookingsTable">
+                            <thead>
+                                <tr>
+                                    <th>رقم الحجز</th>
+                                    <th>اسم الضيف</th>
+                                    <th>الهاتف</th>
+                                    <th>تاريخ الوصول</th>
+                                    <th>تاريخ المغادرة</th>
+                                    <th>نوع الإقامة</th>
+                                    <th>الحالة</th>
+                                    <th>الإجراءات</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bookingsTableBody">
+                                <!-- الحجوزات ستظهر هنا -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>استراحة وشاليه الغصن</h3>
+                    <p>وجهتك المثالية للاستجمام والراحة</p>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#services">الخدمات</a></li>
+                        <li><a href="#gallery">المعرض</a></li>
+                        <li><a href="#booking">الحجز</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>اتصل بنا</h3>
+                    <p><i class="fas fa-phone"></i> +966 50 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@algasan-resort.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 استراحة وشاليه الغصن. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <i class="fas fa-check-circle success-icon"></i>
+                <h3>تم الحجز بنجاح!</h3>
+                <p>شكراً لك، تم استلام طلب الحجز وسنتواصل معك قريباً لتأكيد الحجز.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // انسخ هنا كامل محتوى script.js
+    </script>
+</body>
+</html>
